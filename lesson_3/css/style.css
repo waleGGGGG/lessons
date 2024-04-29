@@ -31,3 +31,33 @@ h2 {
 [class*="lue"] {
     color: #0066ff;
 }
+
+p.information {
+    color: olive;
+}
+
+.information.text {
+    color: olive
+}
+
+.information,
+.text,
+.tustan {
+    color: olive;
+}
+
+.tustan-block ol {
+    color: teal;
+}
+
+.kamyanets-fortress > p {
+    color: olive;
+}
+
+.kamyanets-fortress-image ~ h3 {
+    color: red;
+}
+
+.tustan-castle-image + h3 {
+    color: red;
+}
