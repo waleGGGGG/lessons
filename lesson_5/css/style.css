@@ -1,0 +1,151 @@
+/* RESET */
+@import url(reset.css);
+
+/* FONTS */
+
+/* локально */
+@import url(fonts.css);
+
+/* плагін */
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
+header {
+    font-family: "Roboto", sans-serif;
+}
+
+main,
+footer {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 400;
+    color: #2b2929;
+}
+
+/* HEADER */
+
+.header {
+    background-color: rgba(30, 40, 50, 0.1);
+}
+
+.first_page {
+    padding: 100px 0;
+    margin: 0 auto;
+    max-width: 1320px;
+}
+
+.first_page h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 50px;
+    line-height: 118%; /* 59/50 */
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.first_page_img_block {
+    text-align: center;
+    font-size: 0;
+    margin-right: -24px;
+    overflow: hidden; /*чи правильно я компенсував margin?*/
+}
+
+.first_page_img_block img {
+    max-width: 200px;
+    margin: 0 24px 24px 0;
+}
+
+/* MAIN */
+
+.page {
+    background-color: #F8F8F8; /*чому бек стискається не рівномірно*/
+}
+.second_page {
+    margin: 0 auto;
+    max-width: 1070px;
+    padding: 30px 0;
+}
+
+.second_page h2 {
+    font-size: 40px;
+    line-height: 120%; /* 48/40 */
+    font-weight: 600;
+    margin-bottom: 40px;
+} 
+
+.second_page img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.text_second_page {
+    line-height: 187.5%; /* 30/16 */
+    margin-bottom: 40px;
+}
+
+.text_second_page p {
+    margin-bottom: 10px;
+}
+
+.second_page h3 {
+    font-size: 20px;
+    line-height: 140%; /* 28/20 */
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.list {
+    margin-bottom: 40px;
+}
+.list li {
+    margin: 0 0 20px 47px; /*чи можна так робити в даній ситуації (відступ зліва)*/
+    line-height: 187.5%; /* 30/16 */
+    list-style: circle;
+}
+.final_text_second_page {
+    line-height: 187.5%; /* 30/16 */
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #F8F8F8;
+}
+.third_page {
+    max-width: 1290px; /*розмірний маразм*/
+    margin: 0 auto;
+}
+
+.third_page h2 {
+    font-size: 40px;
+    line-height: 120%; /* 48/40 */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.information_block {
+    font-size: 0;
+    margin-right: -30px;
+    overflow: hidden; /*так само як і на початку, чи правильно я використав margin?*/
+}
+.information_block li {
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 30px 30px 0;
+}
+
+.information_block img {
+    max-width: 170px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.information_block h3 {
+    font-size: 26px;
+    line-height: 130.769231%; /* 34/26 */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.information_block p {
+    font-size: 16px;
+    line-height: 187.5%; /* 30/16 */
+}
