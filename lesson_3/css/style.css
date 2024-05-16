@@ -1,0 +1,63 @@
+/* RESET */
+@import url(reset.css);
+
+/* розумію, що ми ще не вчили padding, але на моїй сторінці тег зірочка було дуже
+зручно використати саме з ним, не сваріть =) */
+* {
+    padding-bottom: 10px;
+}
+
+p {
+    color: navy;
+}
+
+/* .blue {
+    color: #0066ff;
+} */
+
+.yellow {
+    color: #ffae00;
+}
+
+
+h2 {
+    color: brown;
+}
+
+#link-color {
+    color: red;
+}
+
+[class*="lue"] {
+    color: #0066ff;
+}
+
+p.information {
+    color: olive;
+}
+
+.information.text {
+    color: olive
+}
+
+.information,
+.text,
+.tustan {
+    color: olive;
+}
+
+.tustan-block ol {
+    color: teal;
+}
+
+.kamyanets-fortress > p {
+    color: olive;
+}
+
+.kamyanets-fortress-image ~ h3 {
+    color: red;
+}
+
+.tustan-castle-image + h3 {
+    color: red;
+}
