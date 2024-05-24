@@ -199,3 +199,6 @@
     outline: 3px solid gray;
     display: inline-block;
 }
+.krovato_container a:hover {
+    text-decoration: underline;
+}
