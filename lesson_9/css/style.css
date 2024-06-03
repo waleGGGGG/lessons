@@ -1,0 +1,10 @@
+/* RESET */
+@import url(reset.css);
+
+/* FONTS */
+@import url(fonts.css);
+
+body {
+    font-family: "Proxima Nova";
+    font-weight: 600;
+}
