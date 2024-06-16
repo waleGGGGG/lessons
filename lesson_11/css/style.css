@@ -1,0 +1,488 @@
+/* RESET */
+@import url(reset.css);
+
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
+body {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 600;
+}
+
+.wrapper {
+    margin-bottom: 33px;
+    min-height: 100%;
+    overflow: clip;
+    padding: 5px;
+    text-align: center;
+}
+/* фіксовані значення розмірів надалі необхідні, звісно в верстці такого я робити не буду */
+/* HEADER */ 
+
+.header {
+    padding: 20px 0;
+    margin-bottom: 430px;
+    background-color: bisque;
+}
+.text {
+    font-family: "Roboto";
+    font-size: 30px;
+    margin-bottom: 33px;
+}
+.blocks-container {
+    max-width: 1830px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 0;
+}
+.blocks-container div {
+    font-size: 20px;
+    font-weight: 600;
+}
+.blocks-container > div:not(:last-child) {
+    background-color: rgb(189, 255, 127);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 450px;
+    height: 60px; 
+    padding: 10px 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.blocks-container div:not(:nth-child(4n)) {
+    margin-right: 10px;
+}
+[class*="block__"] {
+    color: rgb(94, 94, 94);
+}
+[class*="block__"]:hover {
+    box-shadow: 0px 0px 17px 3px gray;
+    color: rgb(0, 0, 0);
+}
+.block__translate:hover ~ .show-image {
+    transform: translate(20px,20px);
+}
+.block__translate:hover ~ .show-image  .show-image__lol-picture {
+    opacity: 0.8;
+}
+.block__scale:hover ~ .show-image {
+    transform: scale(1.2,1.2);
+}
+.block__scale:hover ~ .show-image  .show-image__big-eye {
+    opacity: 0.9;
+}
+.block__rotate:hover ~ .show-image {
+    transform: rotate(180deg);
+}
+.block__rotate:hover ~ .show-image .show-image__dog {
+    opacity: 0.9;
+}
+.block__skew:hover ~ .show-image {
+    transform: skew(30deg, 0deg);
+}
+.block__skew:hover ~ .show-image .show-image__jackson {
+    opacity: 0.8;
+}
+.block__matrix:hover ~ .show-image .show-image__matrix {
+    opacity: 1;
+    transform-origin: left;
+    transform: translate(0px, 30px) scale(0.8) rotate(180deg);
+}
+.block__perspective:hover ~ .show-image .show-image__perspective {
+    opacity: 1;
+    transform: rotate3d(3,0.8,1, 60deg);
+}
+.block__preserve-3d:hover ~ .show-image {
+    transform-style: preserve-3d;
+}
+.block__preserve-3d:hover ~ .show-image .show-image__preserve-3d {
+    opacity: 1;
+    transform: rotateY(45deg);
+}
+.block__preserve-3d:hover ~ .show-image .show-image__preserve-3d-second {
+    opacity: 1;
+    transform: rotateY(85deg);
+}
+.block__preserve-3d:hover ~ .show-image .show-image__preserve-3d-third {
+    opacity: 1;
+    transform: rotateY(135deg);
+}
+/* ---------------------------------------------------------------------- */
+.show-image {
+    position: absolute;
+    perspective: 450px;
+    top: 233px;
+    left: 770px;
+    background-color: rgba(128, 128, 128, 0.733);
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+    z-index: 2;
+}
+[class*="show-image__"] {
+    height: 300px;
+    width: 300px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1s;
+}
+.show-image__lol-picture {
+    background-image: url(../img/lol-face.jpg);
+}
+.show-image__big-eye {
+    background: url(../img/YevJeniy.jpg) -75px 0 / cover no-repeat;
+}
+.show-image__dog {
+    background-image: url(../img/dogs.png);
+    background-size: cover;
+    transform: rotate(180deg);
+    transition: all 1.3s;
+}
+.show-image__jackson {
+    background-image: url(../img/michael-jackson.jpg);
+    background-size: cover;
+    background-position: 0px -10px;
+    transform: rotateY(180deg);
+    transition: all 0.8s;
+}
+.show-image__matrix {
+    background-color: rgba(163, 46, 46, 0.753);
+}
+.show-image__perspective {
+    background-color: rgba(163, 46, 46, 0.753);
+}
+.show-image__preserve-3d {
+    background-color: rgba(163, 46, 46, 0.753);
+}
+.show-image__preserve-3d-second {
+    background-color: rgba(26, 202, 56, 0.753);
+}
+.show-image__preserve-3d-third {
+    background-color: rgba(28, 47, 224, 0.753);
+}
+
+/* PAGE */
+
+.page {
+    margin-bottom: 50px;
+    background-color: beige;
+}
+.page-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-size: 0px;
+}
+.page-container h3 {
+    font-family: "Roboto";
+    font-size: 19px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+}
+.page-container > div {
+    display: inline-block;
+    text-align: center;
+}
+.page-container > div:not(:last-child) {
+    margin-right: 80px;
+}
+.card-block {
+    position: relative;
+    perspective: 400px;
+}
+.card-block > div {
+    transition: all 0.8s;
+}
+.card-block img {
+    width: 200px;
+}
+.card-block__item-front {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.card-block__item-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+.card-block:hover .card-block__item-front {
+    transform: rotateY(0deg);
+}
+.card-block:hover .card-block__item-back {
+    transform: rotateY(-180deg);
+}
+
+/* FOOTER */
+
+.footer-container {
+    width: 100%;
+    height: 600px;
+    background-color: aquamarine;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* BUTTONS */
+
+[class*="button-"] {
+    font-family: "Roboto";
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 20px;
+    background-color: white;
+    padding: 15px;
+    border: 2px solid black;
+    color: rgb(116, 115, 115);
+    transition: all 0.2s;
+}
+
+/* CAR */
+
+.car-items {
+    perspective: 200px;
+}
+[class*="car-items__"] {
+    position: absolute;
+}
+.car-items__body {
+    width: 480px;
+    height: 120px;
+    background-color: rgb(221, 1, 1);
+    border-radius: 25px 36% 25px 25px;
+    border: black 3px solid;
+    top: 350px;
+    left: 700px;
+    z-index: 2;
+}
+.car-items__front-glass {
+    width: 100px;
+    height: 18px;
+    background-color: rgb(221, 1, 1);
+    transform: rotate(55deg);
+    border: black 2px solid;
+    border-radius: 10px;
+    top: 322px;
+    left: 980px;
+}
+.car-items__door {
+    width: 150px;
+    height: 120px;
+    background-color: rgb(221, 1, 1);
+    border: black 3px solid;
+    top: 350px;
+    left: 885px;
+    z-index: 3;
+    font-size: 14px;
+    padding: 24px;
+    color: rgb(109, 28, 28);
+}
+[class*="__wheels"] {
+    width: 110px;
+    height: 110px;
+    background-color: rgb(182, 180, 180);
+    border-radius: 100%;
+    border: rgb(88, 88, 88) 19px solid;
+    outline: 2px dashed black;
+}
+[class*="__arch"] {
+    width: 112px;
+    height: 112px;
+    border-radius: 100%;
+    border: black 1px solid;
+    background-color: aquamarine;
+    box-shadow: 0px -4px 0px 3px black;
+}
+.car-items__wheels-front {
+    top: 412px;
+    left: 1032px;
+    z-index: 5;
+}
+.car-items__arch-front {
+    top: 401px;
+    left: 1032px;
+    z-index: 4;
+}
+.car-items__wheels-back {
+    top: 412px;
+    left: 720px;
+    z-index: 5;
+}
+.car-items__arch-back {
+    top: 401px;
+    left: 720px;
+    z-index: 4;
+}
+[class*="__anchor"] {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 100%;
+}
+.car-items__anchor-front {
+    top: 457px;
+    left: 1077px;
+    z-index: 6;
+}
+.car-items__anchor-back {
+    top: 457px;
+    left: 765px;
+    z-index: 6;
+}
+.car-items__front-light {
+    width: 25px;
+    height: 25px;
+    background-color: rgba(245, 232, 215, 0.767);
+    border-radius: 0% 48% 15% 0%;
+    top: 383px;
+    left: 1152px;
+    z-index: 3;
+}
+.car-items__stop-light{
+    width: 25px;
+    height: 25px;
+    background-color: rgba(248, 128, 128, 0.89);
+    border-radius: 0% 48% 15% 0%;
+    top: 371px;
+    left: 703px;
+    z-index: 3;
+}
+.car-items__wheel {
+    height: 40px;
+    width: 10px;
+    background-color: black;
+    border-radius: 9px;
+    transform: rotate(20deg);
+    top: 330px;
+    left: 996px;
+}
+.car-items__seat {
+    height: 50px;
+    width: 19px;
+    background-color: black;
+    border-radius: 9px;
+    transform: rotate(-37deg);
+    top: 315px;
+    left: 880px;
+}
+.car-items__handle {
+    width: 23px;
+    height: 10px;
+    background-color: rgb(58, 58, 58);
+    border-radius: 8px;
+    z-index: 4;
+    top: 364px;
+    left: 895px;
+}
+.car-items__trunk {
+    width: 130px;
+    height: 9px;
+    background-color: black;
+    border-radius: 8px;
+    top: 332px;
+    left: 709px;
+}
+[class*="__pillar"] {
+    height: 20px;
+    width: 6px;
+    background-color: black;
+}
+.car-items__pillar-front {
+    top: 333px;
+    left: 815px;
+}
+.car-items__pillar-back {
+    top: 333px;
+    left: 727px;
+} 
+[class*="__bumper"] {
+    height: 20px;
+    width: 32px;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 3;
+}
+.car-items__bumper-back {
+    top: 434px;
+    left: 684px;
+}
+.car-items__bumper-front {
+    top: 434px;
+    left: 1162px;
+}
+.car-items__protection {
+    height: 70px;
+    width: 8px;
+    background-color: black;
+    top: 370px;
+    left: 1183px;
+    border-radius: 3px;
+}
+.car-items__protection-block {
+    height: 16px;
+    width: 8px;
+    background-color: black;
+    top: 378px;
+    left: 1187px;
+    border-radius: 2px;
+}
+.car-items__protection-bottom {
+    height: 11px;
+    width: 218px;
+    background-color: black;
+    border-radius: 8px;
+    top: 461px;
+    left: 823px;
+    z-index: 6;
+}
+.car-items__signal {
+    position: absolute;
+    top: 271px;
+    left: 900px;
+    opacity: 0;
+}
+.car-items__signal img{
+    width: 101px;
+    height: 80px;
+}
+/* DASHBOARD */
+
+[class*="button-"]:hover {
+    box-shadow: 0px 0px 17px 3px gray;
+    transform: scale(1.06);
+    color: rgb(0, 0, 0);
+    transition: all 0.2s;
+}
+.button-forvard:hover ~ .car-items__wheels-front,
+.button-forvard:hover ~ .car-items__wheels-back {
+    transform: rotate(180deg);
+    transition: all 6s;
+}
+.button-back:hover ~ .car-items__wheels-front,
+.button-back:hover ~ .car-items__wheels-back {
+    transform: rotate(-180deg);
+    transition: all 6s;
+}
+.button-running-lights:hover ~ .car-items__front-light {
+    background-color: rgb(252, 198, 128);
+}
+.button-running-lights:hover ~ .car-items__stop-light {
+    background-color: rgb(255, 143, 143);
+}
+.button-front-light:hover ~ .car-items__front-light {
+    background-color: rgb(253, 187, 100);
+    box-shadow: 26px 0px 7px 4px rgba(255, 255, 255, 0.911);
+}
+.button-stop-light:hover ~ .car-items__stop-light {
+    background-color: rgb(255, 143, 143);
+    box-shadow: -22px 0px 9px 4px rgb(221, 1, 1);
+}
+.button-signal:hover ~ .car-items__signal {
+    opacity: 1;
+}
