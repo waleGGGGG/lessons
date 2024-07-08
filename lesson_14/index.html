@@ -14,10 +14,10 @@
             <div class="page__container">
                 <form action="#" enctype="multipart/form-data" class="form">
                     <h1 class="form__title">Оформлення замовлення</h1>
-                    <fieldset class="form__inform-box">
+                    <div class="form__inform-box">
                         <div class="information">
                             <img src="img/information-box/icon-info.svg" alt="іконка ін формації про покупця" class="information__icon">
-                            <legend class="information__title">Інформація про покупця</legend>
+                            <span class="information__title">Інформація про покупця</span>
                         </div>
                         <div class="input-block">
                             <div class="input-block__full-name">
@@ -34,15 +34,15 @@
                             <input type="checkbox" class="check__input-none" name="form[]" id="check" tabindex="6">
                             <label for="check" class="check__label">Отримуватиме замовлення інша людина</label>
                         </div>
-                    </fieldset>
-                    <fieldset class="form__delivery-box">
+                    </div>
+                    <div class="form__delivery-box">
                         <div class="information">
                             <img src="img/delivery-box/delivery-icon.svg" alt="іконка вибору способу доставки" class="information__icon">
-                            <legend class="information__title">Вибір способу доставки</legend>
+                            <span class="information__title">Вибір способу доставки</span>
                         </div>
                         <div class="choise-block">
                             <div class="card">
-                                <input type="radio" name="delivery" value="form[]" id="" class="card__input-none">
+                                <input type="radio" name="delivery" value="self-pickup" class="card__input-none">
                                 <div class="card__items">
                                     <img src="img/delivery-box/self-pickup.svg" alt="самовивіз"
                                     class="card__picture">
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <input type="radio" name="delivery" value="form[]" id="" class="card__input-none">
+                                <input type="radio" name="delivery" value="del-nova-post" class="card__input-none">
                                 <div class="card__items">
                                     <img src="img/delivery-box/np.svg" alt="нова пошта" class="card__picture">
                                     <img src="img/delivery-box/check-circle.svg" alt="вибраний пункт" class="card__check">
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <input type="radio" name="delivery" value="form[]" id="" class="card__input-none">
+                                <input type="radio" name="delivery" value="courier" class="card__input-none">
                                 <div class="card__items">
                                     <img src="img/delivery-box/courier.svg" alt="кур'єр"
                                     class="card__picture">
@@ -86,11 +86,11 @@
                             </div>
                             <a href="https://www.google.com/maps/place/Кровато/@50.3960037,30.4212149,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4c985b50a7e6d:0x3d3fa41b01332a2a!8m2!3d50.3960037!4d30.4237898!16s%2Fg%2F11h18zp7_1?entry=ttu" class="address__map-button" target="_blank">На мапі</a>
                         </div>
-                    </fieldset>
-                    <fieldset class="form__payment-selection-box">
+                    </div>
+                    <div class="form__payment-selection-box">
                         <div class="information">
                             <img src="img/payment-selection-box/icon-comment.svg" alt="іконка вибору оплати" class="information__icon">
-                            <legend class="information__title">Коментар до замовлення</legend>
+                            <span class="information__title">Коментар до замовлення</span>
                         </div>
                         <ul class="pay-list">
                             <li>
@@ -101,7 +101,7 @@
                             </li>
                             <li>
                                 <label for="visa-master" class="pay-list__item">
-                                    <input type="radio" name="formpayment" value="visa-master" class="pay-list__input-none" id="visa-master">
+                                    <input type="radio" name="payment" value="visa-master" class="pay-list__input-none" id="visa-master">
                                     <span>Оплата карткою на сайті</span>
                                     <img src="img/payment-selection-box/master-card-logo.png" alt="логотип мастер-кард">
                                     <img src="img/payment-selection-box/visa-card-logo.png" alt="логотип віза">
@@ -111,7 +111,7 @@
                                 <label for="p24" class="pay-list__item">
                                     <input type="radio" name="payment" value="privatpay" class="pay-list__input-none" id="p24">
                                     <span>Privat Pay</span>
-                                    <img src="img/payment-selection-box/privat-pay-logo.png" alt="приват24">
+                                    <img src="img/payment-selection-box/privat-pay-logo.png" alt="логотип приват24">
                                 </label>
                             </li>
                             <li>
@@ -124,18 +124,18 @@
                                 <label for="credit-p24" class="pay-list__item">
                                     <input type="radio" name="payment" value="credit-p24" class="pay-list__input-none" id="credit-p24">
                                     <span>Оплата частинами ПриватБанк</span>
-                                    <img src="img/payment-selection-box/privaty-credit-logo.png" alt="кредит ПриватБанк">
+                                    <img src="img/payment-selection-box/privaty-credit-logo.png" alt="логотип ПриватБанк">
                                 </label>
                             </li>
                             <li>
                                 <label for="credit-mono" class="pay-list__item">
                                     <input type="radio" name="payment" value="credit-mono" class="pay-list__input-none" id="credit-mono">
                                     <span>Оплата частинами МоноБанк</span>
-                                    <img src="img/payment-selection-box/mono-bank-logo.png" alt="кредит МоноБанк">
+                                    <img src="img/payment-selection-box/mono-bank-logo.png" alt="логотип МоноБанк">
                                 </label>
                             </li>
                         </ul>
-                    </fieldset>
+                    </div>
                 </form>
             </div>
         </main>

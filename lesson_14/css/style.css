@@ -40,10 +40,10 @@
     margin-bottom: 40px;
 }
 /* --- */
-.form fieldset:first-of-type {
+.form div:first-of-type {
     border-radius: 8px 8px 0 0;
 }
-.form fieldset:last-of-type {
+.form div:last-of-type {
     border-radius: 0 0 8px 8px;
 }
 
@@ -54,7 +54,6 @@
 }
 .information__icon {
     flex-basis: 60px;
-    width: 100%;
 }
 .information__title {
     font-size: 26px;
@@ -139,7 +138,7 @@
     cursor: pointer;
 }
 .card__input-none:hover + .card__items {
-    background-color: #ffbc5723;
+    background-color: #b1b1b133;
 }
 .card__input-none:focus-visible + .card__items {
     outline: 3px solid #ffbc57;
@@ -192,7 +191,6 @@
 }
 .address__location-icon {
     flex-basis: 40px;
-    width: 100%;
     margin-right: 20px;
 }
 .address__inform { 
@@ -234,13 +232,22 @@
     display: flex;
     flex-direction: column;
     row-gap: 24px;
+    align-self: flex-start;
+}
+.pay-list > li {
+    border-radius: 4px;
+    transition-duration: 0.2s;
+}
+.pay-list > li:hover {
+    background-color: #b1b1b141;
+    transition-duration: 0.2s;
 }
 .pay-list__item {
     display: flex;
     align-items: center;
     column-gap: 10px;
-    width: max-content;
     cursor: pointer;
+    position: relative;
 }
 .pay-list__item > span {
     font-size: 17px;
@@ -248,23 +255,31 @@
     display: flex;
     align-items: center;
 }
-.pay-list__item:hover > span {
-    color: #d68100;
-}
+
 .pay-list__item > span::before {
     content: "";
     width: 20px;
     height: 20px;
     border: 2px solid #B1B1B1;
     border-radius: 100%;
-    display: inline-block;
-    vertical-align: middle;
     margin-right: 12px;
+    flex-shrink: 0;
 }
 .pay-list__item > img {
     flex-basis: 48px;
-    width: 100%;
 }
 .pay-list__input-none:focus-visible + span {
     color: #d68100;
+    background-color: #b1b1b133;
+}
+.pay-list__input-none:checked + span {
+    color: #d68100;
+}
+.pay-list__input-none:checked + span::before {
+    content: "";
+    background: url(../img/payment-selection-box/payment-check-icon.svg) center;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    border: 0px;
 }
