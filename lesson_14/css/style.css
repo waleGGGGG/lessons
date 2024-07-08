@@ -228,6 +228,9 @@
 .address__map-button:hover {
     background-color: #fca31d;
 }
+.address__map-button:focus-visible {
+    outline: 2px solid #fca31d;
+}
 /* --- */
 .pay-list {
     display: flex;
