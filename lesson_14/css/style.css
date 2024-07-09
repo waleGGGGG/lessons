@@ -62,6 +62,7 @@
 }
 .information__icon {
     flex-basis: 60px;
+    overflow: hidden;
 }
 .information__title {
     font-size: 26px;
@@ -222,6 +223,7 @@
     line-height: 126.315789%; /* 24/19 */
     color: #fff;
     font-weight: 600;
+    flex-shrink: 0;
 }
 .address__map-button::before {
     content: "";
