@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>lesson_15</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <!-- я дублював деякі блоки для тренування адаптиву, як вивчу JS такою дурньою
+             більше не страждатиму, не сваріть! -->
+            <div class="header__top-section top">
+                <div class="top__container">
+                    <ul class="nav-block">
+                        <li class="nav-block__item">
+                            <a href="" class="nav-block__link">Про нас</a>
+                        </li>
+                        <li class="nav-block__item">
+                            <a href="" class="nav-block__link">Оплата</a>
+                        </li>
+                        <li class="nav-block__item">
+                            <a href="" class="nav-block__link">Доставка та збірка</a>
+                        </li>
+                        <li class="nav-block__item">
+                            <a href="" class="nav-block__link">Відгуки</a>
+                        </li>
+                        <li class="nav-block__item">
+                            <a href="" class="nav-block__link">Блог</a>
+                        </li>
+                        <li class="nav-block__item">
+                            <a href="" class="nav-block__link">Контакти</a>
+                        </li>
+                    </ul>
+                    <div class="action-block">
+                        <div class="messengers">
+                            <p class="messengers__title">Допомога і консультація:</p>
+                            <div class="messengers__items">
+                                <a href="#" class="messengers__link">
+                                    <img src="img/top/messengers/whatsapp.svg" alt="іконка     застосунку whatsapp" class="messengers__icon">
+                                </a>
+                                <a href="#" class="messengers__link">
+                                    <img src="img/top/messengers/telegram.svg" alt="іконка     застосунку telegram" class="messengers__icon">
+                                </a>
+                                <a href="#" class="messengers__link">
+                                    <img src="img/top/messengers/viber.svg" alt="іконка застосунку     viber" class="messengers__icon">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- без вивчення js поки накостиляв щось таке -->
+                        <div class="lang-switch">
+                            <select name="language" class="lang-switch__select">
+                                <option value="UA" selected>UA</option>
+                                <option value="EN">EN</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__middle-section middle">
+                <div class="middle__container">
+                    <!-- JS списав у штучного інтелекту, бо суто методами CSS зробити діючий бургер ніяк не виходило -->
+                    <button class="middle__burger" id="togglebutton" onclick="toggletransform()"><span></span>
+                    </button>
+                    <script>
+                        const middle__burger = document.getElementById('togglebutton');
+                        function toggletransform() {
+                            middle__burger.classList.toggle('active');
+                        }
+                        middle__burger.addEventListener('blur', () => {
+                            middle__burger.classList.remove('active');
+                        });
+                    </script>
+                    <ul class="middle__hidden-list list-hidden">
+                        <li class="list-hidden__item">
+                            <a href="#" class="list-hidden__link">Про нас</a>
+                        </li>
+                        <li class="list-hidden__item">
+                            <a href="#" class="list-hidden__link">Оплата</a>
+                        </li>
+                        <li class="list-hidden__item">
+                            <a href="#" class="list-hidden__link">Доставка та збірка</a>
+                        </li>
+                        <li class="list-hidden__item">
+                            <a href="#" class="list-hidden__link">Відгуки</a>
+                        </li>
+                        <li class="list-hidden__item">
+                            <a href="#" class="list-hidden__link">Блог</a>
+                        </li>
+                        <li class="list-hidden__item">
+                            <a href="#" class="list-hidden__link">Контакти</a>
+                        </li>
+                        <li class="list-hidden__item list-hidden__item--font-style">
+                            <img src="img/middle/hidden-list-icons/credit.svg" alt="іконка покупки в кредит" class="list-hidden__icon">
+                            <a href="#" class="list-hidden__link">Купити в кредит</a>
+                        </li>
+                        <li class="list-hidden__item list-hidden__item--font-style">
+                            <img src="img/middle/hidden-list-icons/sale.svg" alt="іконка розпродажу" class="list-hidden__icon">
+                            <a href="#" class="list-hidden__link">Розпродаж</a>
+                        </li>
+                        <li class="list-hidden__item list-hidden__item--font-style">
+                            <img src="img/middle/hidden-list-icons/promotions.svg" alt="іконка акцій" class="list-hidden__icon">
+                            <a href="#" class="list-hidden__link">Акції</a>
+                        </li>
+                    </ul>
+                    <div class="middle__logo">
+                        <img src="img/middle/logo/logo-header.svg" alt="логотип кровато">
+                    </div>
+                    <button type="button" href="#" class="middle__catalogue-but catalogue" id="togglecatalogue" onclick="toggleactive()">
+                        <span>Каталог</span>
+                    </button>
+                    <!-- це написав не я а штучний інтелект, я не винен =) -->
+                    <script>
+                        const catalogue = document.getElementById('togglecatalogue');
+                        function toggleactive() {
+                            catalogue.classList.toggle('active');
+                        }
+                        catalogue.addEventListener('blur', () => {
+                            catalogue.classList.remove('active');
+                        });
+                    </script>
+                    <form action="#" name="form[search]" enctype="multipart/form-data" class="middle__search search">
+                        <input type="text" placeholder="Пошук товарів" class="search__input">
+                        <button type="submit" class="search__button"></button>
+                    </form>
+                    <div class="contacts-block">
+                        <img src="img/middle/contacts/telephone.svg" alt="іконка телефону" class="contacts-block__icon">
+                        <div class="contacts-block__inform-items">
+                            <p class="contacts-block__work-schedule">Щодня з 9:00 до 18:00</p>
+                            <a href="tel:0679294545" class="contacts-block__tel">067 929-45-45</a>
+                        </div>
+                        <ul class="contacts-block__hidden-items">
+                            <li class="contacts-block__tel-hidden">
+                                <a href="tel:0679294545">067 929-45-45</a>
+                            </li>
+                            <li>
+                                <a href="tel:0501334545">050 133-45-45</a>
+                            </li>
+                            <li>
+                                <a href="tel:0931707545">093 170-75-45</a>
+                            </li>
+                            <li>
+                                <a href="#" class="contacts-block__call-me">Передзвоніть мені</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="store-items">
+                        <button class="store-items__item store-items__item--hidden">
+                            <img src="img/middle/store-items/search--store-items.svg" alt="іконка пошуку">
+                        </button>
+                        <button class="store-items__item">
+                            <img src="img/middle/store-items/favorite.svg" alt="іконка додати в обране">
+                        </button>
+                        <button class="store-items__item">
+                            <img src="img/middle/store-items/basket.svg" alt="іконка додати в корзину">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom-section bottom">
+                <div class="bottom__container">
+                    <ul class="offers">
+                        <li class="offers__items">
+                            <img src="img/bottom/promotions.svg" alt="іконка акції" class="offers__icon">
+                            <a href="#" class="offers__link">Акції</a>
+                        </li>
+                        <li class="offers__items">
+                            <img src="img/bottom/sale.svg" alt="іконка розпродаж" class="offers__icon">
+                            <a href="#" class="offers__link">Розпродаж</a>
+                        </li>
+                        <li class="offers__items">
+                            <img src="img/bottom/credit.svg" alt="іконка кредит" class="offers__icon">
+                            <a href="#" class="offers__link">Купити в кредит</a>
+                        </li>
+                    </ul>
+                    <ul class="store-nav">
+                        <li class="store-nav__item">
+                            <a href="#" class="store-nav__link">Дитяча</a>
+                        </li>
+                        <li class="store-nav__item">
+                            <a href="#" class="store-nav__link">Кухня</a>
+                        </li>
+                        <li class="store-nav__item">
+                            <a href="#" class="store-nav__link">Ванна</a>
+                        </li>
+                        <li class="store-nav__item">
+                            <a href="#" class="store-nav__link">Спальня</a>
+                        </li>
+                        <li class="store-nav__item">
+                            <a href="#" class="store-nav__link">Передпокій</a>
+                        </li>
+                        <li class="store-nav__item">
+                            <a href="#" class="store-nav__link">Вітальня</a>
+                        </li>
+                        <li class="store-nav__item">
+                            <a href="#" class="store-nav__link">Офіс</a>
+                        </li>
+                    </ul>
+                    <button type="button" href="#" class="catalogue-hidden">
+                        <span>Каталог</span>
+                    </button>
+                    <form action="#" name="form[search]" enctype="multipart/form-data" class="search search--hidden">
+                        <input type="text" placeholder="Пошук товарів" class="search__input">
+                        <button type="submit" class="search__button"></button>
+                    </form>
+                    <div class="store-items-hidden">
+                        <button class="store-items-hidden__item store-items-hidden__item--hidden">
+                            <img src="img/middle/store-items/search--store-items.svg" alt="іконка пошуку">
+                        </button>
+                        <button class="store-items-hidden__item">
+                            <img src="img/middle/store-items/favorite.svg" alt="іконка додати в обране">
+                        </button>
+                        <button class="store-items-hidden__item">
+                            <img src="img/middle/store-items/basket.svg" alt="іконка додати в корзину">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+        </main>
+        <footer class="footer">
+        </footer>
+    </div>
+</body>
+</html>
