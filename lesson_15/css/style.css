@@ -113,7 +113,6 @@
     width: 24px;
     height: 24px;
     position: absolute;
-    top: center;
     left: 26px;
     pointer-events: none;
     transform: rotate(-360deg);
