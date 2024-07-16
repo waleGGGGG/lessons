@@ -156,6 +156,7 @@
     background-color: #fff;
     box-shadow: 0 0 15px 0 rgba(0,0,0,.12);
     border-radius: 0 8px 8px 0;
+    z-index: 5;
 }
 .list-hidden__item {
     font-size: 20px;
@@ -608,5 +609,14 @@
     /* цей момент зроблений по макету */
     [class*="__container"] {
         max-width: 410px;
+    }
+}
+@media (max-width: 380.98px) {
+    .store-items-hidden__item {
+        flex: 0 0 45px;
+    }
+    .store-items-hidden__item img {
+        max-width: 45px;
+        width: 100%;
     }
 }
