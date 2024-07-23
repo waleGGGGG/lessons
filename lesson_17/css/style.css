@@ -24,17 +24,16 @@
 .browse-block {
     border-radius: 40px;
     background-color: #f0f0f0;
-    /* padding: 70px 64px 76px 64px; */
-    padding-left: min(max(24px, calc(24px + (64 - 24) * ((100vw - 358px) / (1239 - 258)))), 64px);
-    padding-right: min(max(24px, calc(24px + (64 - 24) * ((100vw - 358px) / (1239 - 258)))), 64px);
-    padding-top: min(max(40px, calc(40px + (68 - 40) * ((100vw - 358px) / (1239 - 258)))), 68px);
-    padding-bottom: min(max(27px, calc(27px + (76 - 27) * ((100vw - 358px) / (1239 - 258)))), 76px);
+    padding-left: min(max(24px, calc(24px + (64 - 24) * ((100vw - 358px) / (1239 - 358)))), 64px);
+    padding-right: min(max(24px, calc(24px + (64 - 24) * ((100vw - 358px) / (1239 - 358)))), 64px);
+    padding-top: min(max(40px, calc(40px + (68 - 40) * ((100vw - 358px) / (1239 - 358)))), 68px);
+    padding-bottom: min(max(27px, calc(27px + (76 - 27) * ((100vw - 358px) / (1239 - 358)))), 76px);
     text-align: center;
 }
 .browse-block__title {
     font-family: "IntegralCF", sans-serif;
-    font-size: min(max(32px, calc(32px + (48 - 32) * ((100vw - 358px) / (1239 - 258)))), 48px);
-    margin-bottom: min(max(28px, calc(28px + (61 - 32) * ((100vw - 358px) / (1239 - 258)))), 61px);
+    font-size: min(max(32px, calc(32px + (48 - 32) * ((100vw - 358px) / (1239 - 358)))), 48px);
+    margin-bottom: min(max(28px, calc(28px + (61 - 32) * ((100vw - 358px) / (1239 - 358)))), 61px);
     line-height: 131.25%; /* 63/48 */
     text-transform: uppercase;
 }
@@ -42,7 +41,7 @@
     display: grid;
     grid-template-columns: minmax(0, 407px) 1fr minmax(0, 407px);
     grid-auto-rows: 289px;
-    gap: min(max(16px, calc(16px + (20 - 16) * ((100vw - 358px) / (1239 - 258)))), 20px);
+    gap: min(max(16px, calc(16px + (20 - 16) * ((100vw - 358px) / (1239 - 358)))), 20px);
 }
 .browse-block__cards .card:nth-child(4n + 2),
 .browse-block__cards .card:nth-child(4n + 3) {
@@ -86,7 +85,7 @@
 }
 .card__title {
     font-family: "Satoshi", sans-serif;
-    font-size: min(max(24px, calc(24px + (36 - 24) * ((100vw - 358px) / (1239 - 258)))), 36px);
+    font-size: min(max(24px, calc(24px + (36 - 24) * ((100vw - 358px) / (1239 - 358)))), 36px);
     line-height: 136.111111%; /* 49/36 */
     position: absolute;
     top: 25px;
