@@ -1,0 +1,72 @@
+@use "sass:math";
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:regular&display=swap");
+
+// reset
+@import "_reset.scss";
+
+// mixins
+@import "_mixins.scss";
+
+// ======================================================= //
+
+// Налаштування адаптивної сітки
+
+$minWidth: 393;
+// Ширина полотна (макету)
+$maxWidth: 1512;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1313;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 40;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ======================================================= //
+
+
+// sections
+@import "../scss/sections/header.scss";
+@import "../scss/sections/page__hero-section";
+@import "../scss/sections/page__about-section";
+@import "../scss/sections/page__portfolio-section";
+
+// custom properties
+$f-color: #fff;
+$b-color: #000;
+
+// general styles / components
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    background-color: $b-color;
+    color: $f-color;
+
+    main {
+        flex-grow: 1;
+    }
+}
+
+[class*="__container"] {
+    max-width: 1313px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: "Exo", sans-serif;
+    @include adaptiveValue("font-size", 60, 24);
+    @include adaptiveValue("line-height", 70, 30);
+    font-weight: 700;
+    text-transform: uppercase;
+}
