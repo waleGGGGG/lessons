@@ -946,7 +946,7 @@ button {
 }
 
 .about-section {
-  background: url(../../img/page/about-section/about-back.jpg) 0 0/100% no-repeat;
+  background: url(../img/page/about-section/about-back.jpg) 0 0/100% no-repeat;
   cursor: default;
   margin-bottom: 120px;
 }
@@ -1115,7 +1115,7 @@ button {
 }
 
 .portfolio-section {
-  background: url(../../img/page/portfolio-section/background.png) 0/100% no-repeat;
+  background: url(../img/page/portfolio-section/background.png) 0/100% no-repeat;
   margin-bottom: 200px;
 }
 @media (max-width: 906.98px) {
@@ -1169,8 +1169,8 @@ button {
   background-repeat: no-repeat;
   width: 203px;
   height: 39px;
-  -webkit-mask-image: url(../../img/page/portfolio-section/arrow.svg);
-  mask-image: url(../../img/page/portfolio-section/arrow.svg);
+  -webkit-mask-image: url(../img/page/portfolio-section/arrow.svg);
+  mask-image: url(../img/page/portfolio-section/arrow.svg);
   -webkit-animation: arrow-slide 3s linear infinite;
           animation: arrow-slide 3s linear infinite;
   background-image: -webkit-gradient(linear, left top, right top, from(hsl(0, 100%, 50%)), color-stop(48.9%, hsl(104, 100%, 50%)), to(hsl(248, 100%, 50%)));
@@ -1226,7 +1226,7 @@ button {
   position: absolute;
   top: 54%;
   left: 19%;
-  background: url(../../img/page/portfolio-section/play-video.svg) 0 0/100% no-repeat;
+  background: url(../img/page/portfolio-section/play-video.svg) 0 0/100% no-repeat;
   width: 62.5%;
   height: 11.1%;
   -webkit-transition-duration: 0.3s;
@@ -1238,7 +1238,7 @@ button {
   position: absolute;
   top: 36.1%;
   left: 36.1%;
-  background: url(../../img/page/portfolio-section/play-button.svg) 0 0/100% no-repeat;
+  background: url(../img/page/portfolio-section/play-button.svg) 0 0/100% no-repeat;
   width: 27.7%;
   height: 27.7%;
   -webkit-transition-duration: 0.3s;

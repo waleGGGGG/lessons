@@ -29,10 +29,10 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 
 // sections
-@import "../scss/sections/header.scss";
-@import "../scss/sections/page__hero-section";
-@import "../scss/sections/page__about-section";
-@import "../scss/sections/page__portfolio-section";
+@import "header.scss";
+@import "page__hero-section";
+@import "page__about-section";
+@import "page__portfolio-section";
 
 // custom properties
 $f-color: #fff;
