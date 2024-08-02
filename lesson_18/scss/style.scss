@@ -41,6 +41,12 @@ $l-gradient: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 5
 @import "page__about-section";
 @import "page__portfolio-section";
 
+// functions
+@function percent($num1, $num2) {
+    $rez: math.div($num1, $num2) * 100%;
+    @return $rez;
+}
+
 // general styles / components
 html {
     scroll-behavior: smooth;

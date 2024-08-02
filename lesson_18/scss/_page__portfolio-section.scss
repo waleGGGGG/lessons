@@ -35,6 +35,10 @@
     }
 
     @media (max-width: 962.98px) {
+        &__container {
+            padding-top: 0;
+        }
+
         &__title {
             margin-bottom: 80px;
         }
