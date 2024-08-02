@@ -3,13 +3,10 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    margin-bottom: 20px;
 
     // .header__container
 
     &__container {
-        // padding-top: clamp(40px, calc(40px + (60 - 40) * ((100vw - 393px) / (1920 - 393))), 60px);
-        // padding-bottom: clamp(7px, calc(7px + (30 - 7) * ((100vw - 393px) / (1920 - 393))), 30px);
         padding-top: 10px;
         padding-bottom: 10px;
         min-height: 130px;
@@ -18,6 +15,10 @@
         column-gap: 40px;
         justify-content: space-between;
         position: relative;
+
+        @media (max-width: 768.98px) {
+            min-height: 90px;
+        }
     }
 }
 
