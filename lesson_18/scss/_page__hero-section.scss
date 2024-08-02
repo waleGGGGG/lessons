@@ -16,7 +16,7 @@
         &::before,
         &::after {
             content: "";
-            background: linear-gradient(90deg, rgba(151, 0, 255, 1) 0%, rgba(87, 255, 28, 1) 37%, rgba(255, 0, 0, 1) 67%, rgba(0, 56, 255, 1) 100%);
+            background: $l-gradient;
             aspect-ratio: 1 / 1;
             width: 36.62%;
             border-radius: 100%;
@@ -119,7 +119,7 @@
 
             &::after {
                 content: "";
-                background: linear-gradient(90deg, rgba(255, 0, 0, 1)0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
+                background: $l-gradient;
                 display: block;
                 width: 100%;
                 height: 1px;
@@ -151,12 +151,12 @@
 
         &__contact-link {
             padding: 15px 60px;
-            background-color: #6F00A9;
+            background-color: $but-color;
             transition-duration: 0.3s;
 
             @media (any-hover: hover) {
                 &:hover {
-                    background-color: #0B0045;
+                    background-color: $but-hov-color;
                     transition-duration: 0.3s;
                 }
             }
@@ -410,14 +410,8 @@
 
             &::before,
             &::after {
-                content: "";
-                background: linear-gradient(90deg, rgba(151, 0, 255, 1) 0%, rgba(87, 255, 28, 1) 37%, rgba(255, 0, 0, 1) 67%, rgba(0, 56, 255, 1) 100%);
-                aspect-ratio: 1 / 1;
                 width: 55.2%;
-                ;
-                border-radius: 100%;
                 filter: blur(50px) opacity(0.3);
-                position: absolute;
             }
 
             &::before {

@@ -26,17 +26,20 @@ $containerPadding: 40;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // ======================================================= //
-
+// виніс кольори кнопки на майбутнє, буду доробляти сайт до кінця
+// custom properties
+$f-color: #fff;
+$b-color: #000;
+$hov-color: #9700ff;
+$but-color: #9700ff;
+$but-hov-color: #0B0045;
+$l-gradient: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
 
 // sections
 @import "header.scss";
 @import "page__hero-section";
 @import "page__about-section";
 @import "page__portfolio-section";
-
-// custom properties
-$f-color: #fff;
-$b-color: #000;
 
 // general styles / components
 html {
@@ -78,7 +81,7 @@ html {
         bottom: -20px;
         max-width: 1273px;
         height: 1px;
-        background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
+        background: $l-gradient;
     }
 
     @media (max-width: 768.98px) {

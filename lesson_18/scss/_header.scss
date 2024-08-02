@@ -115,7 +115,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                background-color: #6f00a9;
+                background-color: $hov-color;
                 transition-duration: 0.3s;
             }
         }

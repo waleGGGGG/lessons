@@ -131,7 +131,7 @@
 
         &::after {
             content: "";
-            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
+            background: $l-gradient;
             width: 10px;
             height: 10px;
             display: inline-block;
