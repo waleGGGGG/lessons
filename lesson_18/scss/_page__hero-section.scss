@@ -316,12 +316,6 @@
 
         @media (max-width: 906.98px) {
 
-            &__photo {
-                aspect-ratio: 376 / 508;
-                object-fit: contain;
-                max-width: 376px;
-            }
-
             &__inner {
                 &::after {
                     content: "";

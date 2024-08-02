@@ -135,6 +135,7 @@
         background-color: rgba(0, 0, 0, 0.801);
         border-radius: 0 0 0 10px;
         transition-duration: 0.3s;
+        backdrop-filter: blur(3px);
 
         &__item:hover {
             text-decoration: underline;
