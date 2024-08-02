@@ -8,8 +8,11 @@
     // .header__container
 
     &__container {
-        padding-top: clamp(40px, calc(40px + (60 - 40) * ((100vw - 393px) / (1920 - 393))), 60px);
-        padding-bottom: clamp(7px, calc(7px + (30 - 7) * ((100vw - 393px) / (1920 - 393))), 30px);
+        // padding-top: clamp(40px, calc(40px + (60 - 40) * ((100vw - 393px) / (1920 - 393))), 60px);
+        // padding-bottom: clamp(7px, calc(7px + (30 - 7) * ((100vw - 393px) / (1920 - 393))), 30px);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 130px;
         display: flex;
         align-items: center;
         column-gap: 40px;
