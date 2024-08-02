@@ -131,14 +131,6 @@
                 }
             }
         }
-
-        @media (max-width: 768.98px) {
-            &:hover {
-                &::after {
-                    transform: scale(1.2);
-                }
-            }
-        }
     }
 
     // .card__border-hover
