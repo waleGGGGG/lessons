@@ -17,19 +17,11 @@
     // .portfolio-section__title
 
     &__title {
-        position: relative;
-        display: inline-block;
         margin-bottom: 140px;
 
         &::after {
-            content: "";
-            position: absolute;
             left: 0;
-            bottom: -18%;
             width: calc(100% + 33.74%);
-            max-width: 1273px;
-            height: 1px;
-            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
         }
     }
 

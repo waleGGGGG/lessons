@@ -64,9 +64,26 @@ html {
 }
 
 .title {
+    position: relative;
+    display: inline-block;
     font-family: "Exo", sans-serif;
     @include adaptiveValue("font-size", 60, 24);
     @include adaptiveValue("line-height", 70, 30);
     font-weight: 700;
     text-transform: uppercase;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        max-width: 1273px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
+    }
+
+    @media (max-width: 768.98px) {
+        &::after {
+            bottom: -4px;
+        }
+    }
 }
