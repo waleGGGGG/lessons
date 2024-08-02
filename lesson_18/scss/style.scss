@@ -1,0 +1,98 @@
+@use "sass:math";
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:regular&display=swap");
+
+// reset
+@import "_reset.scss";
+
+// mixins
+@import "_mixins.scss";
+
+// ======================================================= //
+
+// Налаштування адаптивної сітки
+
+$minWidth: 393;
+// Ширина полотна (макету)
+$maxWidth: 1512;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1313;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 40;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ======================================================= //
+// виніс кольори кнопки на майбутнє, буду доробляти сайт до кінця
+// custom properties
+$f-color: #fff;
+$b-color: #000;
+$hov-color: #9700ff;
+$but-color: #9700ff;
+$but-hov-color: #0B0045;
+$l-gradient: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
+
+// sections
+@import "header.scss";
+@import "page__hero-section";
+@import "page__about-section";
+@import "page__portfolio-section";
+
+// functions
+@function percent($num1, $num2) {
+    $rez: math.div($num1, $num2) * 100%;
+    @return $rez;
+}
+
+// general styles / components
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    background-color: $b-color;
+    color: $f-color;
+
+    main {
+        flex-grow: 1;
+    }
+}
+
+[class*="__container"] {
+    max-width: 1313px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    font-family: "Exo", sans-serif;
+    @include adaptiveValue("font-size", 60, 24);
+    @include adaptiveValue("line-height", 70, 30);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        max-width: 1273px;
+        height: 1px;
+        background: $l-gradient;
+    }
+
+    @media (max-width: 768.98px) {
+        &::after {
+            bottom: -4px;
+        }
+    }
+}
