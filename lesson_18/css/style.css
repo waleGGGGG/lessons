@@ -61,11 +61,11 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin-bottom: 20px;
 }
 .header__container {
-  padding-top: clamp(40px, 40px + 20 * (100vw - 393px) / 1527, 60px);
-  padding-bottom: clamp(7px, 7px + 23 * (100vw - 393px) / 1527, 30px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +79,11 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+}
+@media (max-width: 768.98px) {
+  .header__container {
+    min-height: 90px;
+  }
 }
 
 .nickname {
@@ -228,6 +233,8 @@ button {
     border-radius: 0 0 0 10px;
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
   }
   .navigation-block__item:hover {
     text-decoration: underline;
@@ -567,9 +574,6 @@ button {
   }
 }
 @media (max-width: 620.98px) {
-  .hero-section .owner {
-    padding-top: 3px;
-  }
   .hero-section .owner__inner {
     row-gap: 12px;
   }
@@ -680,12 +684,6 @@ button {
   }
 }
 @media (max-width: 906.98px) {
-  .hero-section .composition-block__photo {
-    aspect-ratio: 376/508;
-    -o-object-fit: contain;
-       object-fit: contain;
-    max-width: 376px;
-  }
   .hero-section .composition-block__inner::after {
     content: "";
     display: block;
@@ -995,20 +993,11 @@ button {
   width: 100%;
 }
 .text-block__title {
-  position: relative;
-  display: inline-block;
   margin-bottom: 20px;
 }
 .text-block__title::after {
-  content: "";
-  position: absolute;
   left: -16.74%;
-  bottom: -18%;
   width: 133.4%;
-  max-width: 1273px;
-  height: 1px;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 0, 0)), color-stop(50%, rgb(66, 255, 0)), to(rgb(36, 0, 255)));
-  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(66, 255, 0) 50%, rgb(36, 0, 255) 100%);
 }
 .text-block__inform {
   font-size: 18px;
@@ -1129,20 +1118,11 @@ button {
   cursor: default;
 }
 .portfolio-section__title {
-  position: relative;
-  display: inline-block;
   margin-bottom: 140px;
 }
 .portfolio-section__title::after {
-  content: "";
-  position: absolute;
   left: 0;
-  bottom: -18%;
   width: 133.74%;
-  max-width: 1273px;
-  height: 1px;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 0, 0)), color-stop(50%, rgb(66, 255, 0)), to(rgb(36, 0, 255)));
-  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(66, 255, 0) 50%, rgb(36, 0, 255) 100%);
 }
 .portfolio-section__slides-block {
   display: -webkit-box;
@@ -1392,6 +1372,8 @@ html {
 }
 
 .title {
+  position: relative;
+  display: inline-block;
   font-family: "Exo", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -1438,5 +1420,19 @@ html {
 @media (max-width: 24.5625em) {
   .title {
     line-height: 1.875rem;
+  }
+}
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  max-width: 1273px;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 0, 0)), color-stop(50%, rgb(66, 255, 0)), to(rgb(36, 0, 255)));
+  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(66, 255, 0) 50%, rgb(36, 0, 255) 100%);
+}
+@media (max-width: 768.98px) {
+  .title::after {
+    bottom: -4px;
   }
 }
