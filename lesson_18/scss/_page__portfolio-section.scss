@@ -2,6 +2,11 @@
     background: url(../img/page/portfolio-section/background.png) 0 / 100% no-repeat;
     margin-bottom: 200px;
 
+    @media (max-width: 1203.98px) {
+        margin-bottom: 80px;
+        background: none;
+    }
+
     @media (max-width: 906.98px) {
         background: none;
     }

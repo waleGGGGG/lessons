@@ -410,6 +410,12 @@
 
             &::before,
             &::after {
+                content: "";
+                position: absolute;
+                background: $l-gradient;
+                aspect-ratio: 1 / 1;
+                ;
+                border-radius: 100%;
                 width: 55.2%;
                 filter: blur(50px) opacity(0.3);
             }

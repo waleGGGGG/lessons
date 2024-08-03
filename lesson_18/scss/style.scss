@@ -18,7 +18,8 @@ $minWidth: 393;
 // Ширина полотна (макету)
 $maxWidth: 1512;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1313;
+// відступи не враховуємо, пишемо суто розмір обмежуючого контейнеру
+$maxWidthContainer: 1273;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 40;
@@ -26,7 +27,11 @@ $containerPadding: 40;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // ======================================================= //
-// виніс кольори кнопки на майбутнє, буду доробляти сайт до кінця
+
+// адаптивні розміри
+// @include adaptiveValue("font-size", 48, 12);
+// clamp(14px, calc(14px + (20 - 14) * ((100vw - 393px) / (1920 - 393))), 20px);
+
 // custom properties
 $f-color: #fff;
 $b-color: #000;
@@ -40,12 +45,7 @@ $l-gradient: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 5
 @import "page__hero-section";
 @import "page__about-section";
 @import "page__portfolio-section";
-
-// functions
-@function percent($num1, $num2) {
-    $rez: math.div($num1, $num2) * 100%;
-    @return $rez;
-}
+@import "page__testimonials-section";
 
 // general styles / components
 html {
@@ -66,9 +66,9 @@ html {
 }
 
 [class*="__container"] {
-    max-width: 1313px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: toRem($containerWidth);
+    padding-left: toRem(math.div($containerPadding, 2));
+    padding-right: toRem(math.div($containerPadding, 2));
     margin: 0 auto;
 }
 
