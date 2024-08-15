@@ -1,0 +1,74 @@
+@use "sass:math";
+// fonts
+@import "_fonts.scss"; 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+
+// reset
+@import "_reset.scss";
+
+// mixins
+@import "_mixins.scss";
+
+// ======================================================= //
+
+// Налаштування адаптивної сітки
+
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+// відступи не враховуємо, пишемо суто розмір обмежуючого контейнеру
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ======================================================= //
+
+// адаптивні розміри
+// @include adaptiveValue("font-size", 48, 12);
+// clamp(14px, calc(14px + (20 - 14) * ((100vw - 393px) / (1920 - 393))), 20px);
+
+// custom properties
+$hov-color: #FF6F61;
+$bg-color: #f0f0f0;
+
+//functions
+
+// sections
+@import "header.scss";
+@import "page__collections-block.scss";
+@import "page__brands-block.scss";
+@import "page__popular-block.scss";
+// general styles / components
+html {
+    //scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    h2 {
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex-grow: 1;
+    }
+}
+
+[class*="__container"] {
+    max-width: toRem($containerWidth);
+    padding-left: toRem(math.div($containerPadding, 2));
+    padding-right: toRem(math.div($containerPadding, 2));
+    margin: 0 auto;
+}
+
