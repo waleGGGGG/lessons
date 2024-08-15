@@ -79,7 +79,6 @@
             border-radius: toRem(160) 0 toRem(160) 0;
             aspect-ratio: 424 / 542;
             max-width: toRem(424);
-            height: 100%;
             object-fit: cover;
             z-index: 5;
             position: relative;
@@ -87,19 +86,16 @@
             @media (max-width: toEm(991.98)) {
                 aspect-ratio: 354 / 472;
                 max-width: toRem(354);
-                height: 100%;
             }
 
             @media (max-width: toEm(767.98)) {
                 aspect-ratio: 304 / 422;
                 max-width: toRem(304);
-                height: 100%;
             }
 
             @media (max-width: toEm(620.98)) {
                 aspect-ratio: 354 / 472;
                 max-width: toRem(354);
-                height: 100%;
             }
 
             @media (max-width: toEm(467.98)) {
