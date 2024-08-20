@@ -13,6 +13,7 @@
             /* 22/16 */
             font-weight: 600;
             margin-bottom: toRem(22);
+            cursor: default;
 
             @media (max-width: toEm(465.98)) {
                 margin-bottom: toRem(10);
@@ -192,6 +193,7 @@
         /* 22/16 */
         text-transform: capitalize;
         flex-shrink: 0;
+        transition-duration: 0.3s;
 
         &::before {
             position: absolute;
